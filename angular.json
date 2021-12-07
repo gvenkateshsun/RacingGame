@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "car-race:build:production",
+            "firebaseProject": "vgame-9ddf2",
+            "firebaseHostingSite": "vgame-9ddf2"
+          }
         }
       }
     }

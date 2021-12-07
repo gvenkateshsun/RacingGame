@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vgame-9ddf2"
+  },
+  "targets": {
+    "vgame-9ddf2": {
+      "hosting": {
+        "car-race": [
+          "vgame-9ddf2"
+        ]
+      }
+    }
+  }
+}

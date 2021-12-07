@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 
 import { AppComponent } from './app.component';
 import { AppService } from './services/app.service';
@@ -14,8 +13,7 @@ import { GameService } from './services/game.service';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
   ],
   providers: [AppService, GameService],
   bootstrap: [AppComponent]
